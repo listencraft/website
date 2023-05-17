@@ -1,5 +1,15 @@
 const Header = () => {
-  return <header>Hello</header>;
+  return (
+    <header className="mx-3 my-7 flex justify-between items-center">
+      <div className="flex justify-between items-center self-center">
+        <div className="logo-circle w-5 h-5 rounded-full"></div>
+        <h1 className="ml-2 text-3xl text-white font-semibold">Listencraft</h1>
+      </div>
+      <button className="text-white bg-btnColor1 py-1 px-4 rounded-3xl transition ease-in-out duration-500 hover:bg-btnColorHover  ">
+        Contact us
+      </button>
+    </header>
+  );
 };
 
 export default Header;
