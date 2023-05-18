@@ -18,7 +18,7 @@ const FeaturesSection = () => {
           />
 
           <div className={`${styles.features_container}`}>
-            <div className="px-2 py-2 relative">
+            <div className="px-2 py-2 relative max-w-[500px]">
               <Image
                 className="w-full"
                 src="/assets/svg/text_cloud_1.svg"
@@ -35,7 +35,7 @@ const FeaturesSection = () => {
                 </p>
               </div>
             </div>
-            <div className="px-2 py-2 relative">
+            <div className="px-2 py-2 relative max-w-[500px]">
               <Image
                 className="w-full"
                 src="/assets/svg/text_cloud_2.svg"
@@ -52,7 +52,7 @@ const FeaturesSection = () => {
                 </p>
               </div>
             </div>
-            <div className="px-2 py-2 relative">
+            <div className="px-2 py-2 relative max-w-[500px]">
               <Image
                 className="w-full"
                 src="/assets/svg/text_cloud_3.svg"
@@ -69,7 +69,7 @@ const FeaturesSection = () => {
                 </p>
               </div>
             </div>
-            <div className="px-2 py-2 relative">
+            <div className="px-2 py-2 relative max-w-[500px]">
               <Image
                 className="w-full"
                 src="/assets/svg/text_cloud_4.svg"

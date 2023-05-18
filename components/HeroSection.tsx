@@ -55,11 +55,6 @@ const HeroSection = () => {
             src="/assets/webp/man_woman.webp"
             alt="man and woman are sitting"
           />
-          {/* <img
-            className={styles.ground}
-            src="/assets/svg/ground_bg.svg"
-            alt="brown ground"
-          /> */}
           <FeaturesSection />
         </div>
       </div>

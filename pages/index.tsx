@@ -2,7 +2,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import QuestionsSections from "@/components/QuestionsSections";
+import QuestionsSection from "@/components/QuestionsSection";
 
 export default function Home() {
   return (
@@ -10,8 +10,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        {/* <FeaturesSection /> */}
-        <QuestionsSections />
+        <QuestionsSection />
       </main>
       <Footer />
     </>
