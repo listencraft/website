@@ -11,6 +11,8 @@ module.exports = {
         btnColor1: "#F9A027",
         btnColor2: "#E86805",
         btnColorHover: "#1F1209",
+        bgHeader: "#AE4E01",
+        title: "#FF9B4A",
       },
     },
   },

@@ -7,11 +7,9 @@ import QuestionsSections from "@/components/QuestionsSections";
 export default function Home() {
   return (
     <>
-      <div>
-        <Header />
-        <HeroSection />
-      </div>
+      <Header />
       <main>
+        <HeroSection />
         <FeaturesSection />
         <QuestionsSections />
       </main>
