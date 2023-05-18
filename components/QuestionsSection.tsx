@@ -6,10 +6,10 @@ import Image from "next/image";
 const QuestionsSection = () => {
   return (
     <div
-      className={`${styles.questions_container} overflow-hidden relative py-8 h-full w-full bg-ground mt-[1045px] sm:mt-[1424px] md:mt-[640px] lg:mt-[218px]`}
+      className={`${styles.questions_container} overflow-hidden relative py-8 h-full w-full bg-ground mt-[1045px] sm:mt-[1424px] md:mt-[640px] lg:mt-[218px] lg:h-[400px]`}
     >
       <img
-        className="absolute top-48 left-0 w-full h-auto lg:top-28 xl:top-24"
+        className="absolute top-48 left-0 w-full h-auto object-cover lg:top-28 xl:top-24"
         src="/assets/svg/brown_bg.svg"
         alt="brown background"
       />
