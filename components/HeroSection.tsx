@@ -15,12 +15,14 @@ const HeroSection = () => {
         src="/assets/svg/cloud_2.svg"
         alt="cloud_2"
       />
-      <div className={`${styles.text_section} px-3`}>
-        <h1 className="text-title text-4xl font-semibold">Listencraft</h1>
-        <h2 className="mt-4 text-white text-xl font-semibold">
+      <div className={`${styles.text_section} px-3 md:px-10`}>
+        <h1 className="text-title text-4xl font-semibold 2xl:text-5xl">
+          Listencraft
+        </h1>
+        <h2 className="mt-4 text-white text-xl font-semibold 2xl:text-2xl">
           Learn the art of good listening
         </h2>
-        <div className="mt-4 text-white font-extralight text-lg leading-5 md:w-1/2 lg:w-1/3">
+        <div className="mt-4 text-white font-extralight text-lg leading-5 md:w-1/2  lg:w-1/3 2xl:text-xl">
           <p>
             We experience this personally when we talk to others who don't seem
             to hear anything we say, and we see it in society in general.
@@ -31,7 +33,7 @@ const HeroSection = () => {
             place.
           </p>
         </div>
-        <button className="mt-7 text-white bg-btnColor2 py-1 px-4 rounded-3xl transition ease-in-out duration-500 hover:bg-btnColorHover">
+        <button className="mt-7 text-white bg-btnColor1 py-1 px-4 rounded-3xl transition ease-in-out duration-500 hover:bg-btnColorHover ">
           Contact
         </button>
       </div>

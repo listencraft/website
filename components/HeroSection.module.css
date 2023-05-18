@@ -1,7 +1,7 @@
 .hero_container {
   background: linear-gradient(180deg, #ae4f00 0%, #6e3001 100%);
   padding-bottom: 50%;
-  z-index: -1;
+  z-index: 0;
 }
 
 .cloud_1 {
@@ -22,7 +22,7 @@
 
 .text_section {
   padding-top: 20%;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .image_container {
@@ -45,11 +45,12 @@
   position: absolute;
   z-index: 0;
   bottom: 0;
+  width: 100%;
 }
 
 .trees {
   position: absolute;
-  bottom: 10%;
+  bottom: 7%;
   left: -3%;
   z-index: 1;
   width: 30%;
@@ -59,7 +60,7 @@
 .people {
   position: absolute;
   z-index: 1;
-  bottom: 10%;
+  bottom: 7%;
   right: 2%;
   width: 68%;
   height: auto;
@@ -77,6 +78,11 @@
   .text_section {
     padding-top: 8%;
   }
+
+  .trees {
+    width: 25%;
+    left: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -87,15 +93,24 @@
   .people {
     width: 64%;
   }
-
-  .trees {
-    width: 25%;
-    left: 0;
-  }
 }
 
 @media (min-width: 1280px) {
   .hero_container {
     padding-bottom: 35%;
+  }
+
+  .cloud_1 {
+    width: 10%;
+  }
+
+  .cloud_2 {
+    width: 13%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero_container {
+    padding-bottom: 45%;
   }
 }
