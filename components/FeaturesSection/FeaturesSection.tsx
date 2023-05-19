@@ -11,7 +11,7 @@ const FeaturesSection = () => {
           className={`absolute h-[1080px] inset-0 bg-ground top-20 sm:h-[1450px] sm:top-28 md:top-44 md:h-[650px] lg:hidden`}
         ></div>
 
-        <div className="absolute top-0 left-0 h-full w-full">
+        <div className="absolute top-2 left-0 h-full w-full sm:top-6 md:top-10 xl:top-14">
           <img
             className={styles.ground}
             src="/assets/svg/ground_bg.svg"

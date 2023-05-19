@@ -16,9 +16,9 @@ const QuestionsSection = () => {
       <div
         className={`${styles.light_brown_bg} absolute h-[70%] inset-0 bg-light_brown_bg top-[340px] sm:top-[600px] md:top-[680px] md:h-[650px] lg:hidden`}
       ></div>
-      <h3 className="text-center text-questions text-2xl leading-7 font-extralight pt-10 pb-20 mx-auto w-2/3 sm:pt-0 md:pt-5">
+      <h1 className="text-center text-questions text-2xl leading-7 font-extralight pt-10 pb-20 mx-auto w-2/3 sm:pt-0 md:pt-5 lg:pt-12">
         Below are some questions that need answering. Can you help answer them?
-      </h3>
+      </h1>
 
       <div className="relative">
         <div className="grid grid-rows-3 grid-cols-1 lg:flex lg:justify-center">
