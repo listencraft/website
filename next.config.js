@@ -14,5 +14,5 @@ module.exports = {
     return config;
   },
   // ...
-  cssModules: true,
+  // cssModules: true,
 };
