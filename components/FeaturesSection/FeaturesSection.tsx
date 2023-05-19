@@ -12,10 +12,12 @@ const FeaturesSection = () => {
         ></div>
 
         <div className="absolute top-2 left-0 h-full w-full sm:top-6 md:top-10 xl:top-14">
-          <img
+          <Image
             className={styles.ground}
             src="/assets/svg/ground_bg.svg"
             alt="brown ground"
+            width={500}
+            height={500}
           />
 
           <div className={`${styles.features_container}`}>

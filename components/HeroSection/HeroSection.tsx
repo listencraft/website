@@ -61,15 +61,15 @@ const HeroSection = () => {
             className={styles.trees}
             src="/assets/webp/trees.webp"
             alt="trees"
-            width={100}
-            height={100}
+            width={200}
+            height={200}
           />
           <Image
             className={styles.people}
             src="/assets/webp/man_woman.webp"
             alt="man and woman are sitting"
-            width={100}
-            height={100}
+            width={1000}
+            height={1000}
           />
           <FeaturesSection />
         </div>

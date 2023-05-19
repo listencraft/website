@@ -8,10 +8,12 @@ const QuestionsSection = () => {
     <div
       className={`${styles.questions_container} overflow-hidden relative py-8 h-full w-full bg-ground mt-[1045px] sm:mt-[1424px] md:mt-[640px] lg:mt-[180px] lg:h-[400px]`}
     >
-      <img
+      <Image
         className="absolute top-48 left-0 w-full h-auto object-cover lg:top-28 xl:top-24"
         src="/assets/svg/brown_bottom_bg.svg"
         alt="brown background"
+        width={500}
+        height={500}
       />
       <div
         className={`${styles.light_brown_bg} absolute h-[70%] inset-0 bg-light_brown_bg top-[340px] sm:top-[600px] md:top-[680px] md:h-[650px] lg:hidden`}
