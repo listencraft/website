@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import styles from "./FeaturesSection.module.css";
 import Image from "next/image";
@@ -5,12 +6,12 @@ import Image from "next/image";
 const FeaturesSection = () => {
   return (
     <div className={`${styles.features_section}`}>
-      <div className="relative pb-[100%]">
+      <div className="relative">
         <div
-          className={`absolute h-[1050px] inset-0 bg-ground top-28 sm:h-[1450px] md:top-44 md:h-[650px] lg:hidden`}
+          className={`absolute h-[1080px] inset-0 bg-ground top-20 sm:h-[1450px] sm:top-28 md:top-44 md:h-[650px] lg:hidden`}
         ></div>
 
-        <div className="absolute top-0 left-0 h-full w-full pb-[100%]">
+        <div className="absolute top-0 left-0 h-full w-full">
           <img
             className={styles.ground}
             src="/assets/svg/ground_bg.svg"

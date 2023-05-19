@@ -6,23 +6,23 @@ import Image from "next/image";
 const QuestionsSection = () => {
   return (
     <div
-      className={`${styles.questions_container} overflow-hidden relative py-8 h-full w-full bg-ground mt-[1045px] sm:mt-[1424px] md:mt-[640px] lg:mt-[218px] lg:h-[400px]`}
+      className={`${styles.questions_container} overflow-hidden relative py-8 h-full w-full bg-ground mt-[1045px] sm:mt-[1424px] md:mt-[640px] lg:mt-[180px] lg:h-[400px]`}
     >
       <img
         className="absolute top-48 left-0 w-full h-auto object-cover lg:top-28 xl:top-24"
-        src="/assets/svg/brown_bg.svg"
+        src="/assets/svg/brown_bottom_bg.svg"
         alt="brown background"
       />
       <div
-        className={`${styles.light_brown_bg} absolute h-[70%] inset-0 bg-light_brown_bg top-[360px] sm:top-[600px] md:top-[680px] md:h-[650px] lg:hidden`}
+        className={`${styles.light_brown_bg} absolute h-[70%] inset-0 bg-light_brown_bg top-[340px] sm:top-[600px] md:top-[680px] md:h-[650px] lg:hidden`}
       ></div>
-      <h3 className="text-center text-questions text-2xl leading-7 font-extralight pb-20 mx-auto w-2/3">
+      <h3 className="text-center text-questions text-2xl leading-7 font-extralight pt-10 pb-20 mx-auto w-2/3 sm:pt-0 md:pt-5">
         Below are some questions that need answering. Can you help answer them?
       </h3>
 
       <div className="relative">
         <div className="grid grid-rows-3 grid-cols-1 lg:flex lg:justify-center">
-          <div className="relative bg-questions_bg_1 h-[200px] w-[350px] mb-6 mx-auto rounded-tl-3xl rounded-tr-3xl rounded-br-2xl rounded-bl-2xl md:w-[450px] lg:w-full lg:mx-6 max-w-[400px]">
+          <div className="relative bg-questions_bg_1 h-[200px] w-[300px] mb-6 mx-auto rounded-tl-3xl rounded-tr-3xl rounded-br-2xl rounded-bl-2xl sm:w-[350px] md:w-[450px] lg:w-full lg:mx-6 max-w-[400px]">
             <div className="h-[70px] w-full bg-questions_bg_2 rounded-tl-2xl rounded-tr-2xl flex items-baseline pt-3">
               <Image
                 className="ml-6"
@@ -38,7 +38,7 @@ const QuestionsSection = () => {
               behaviour change?
             </p>
           </div>
-          <div className="relative bg-questions_bg_1 h-[200px]  w-[350px]  mx-auto rounded-tl-3xl rounded-tr-3xl rounded-br-2xl rounded-bl-2xl md:w-[450px] lg:w-full lg:mx-6 max-w-[400px]">
+          <div className="relative bg-questions_bg_1 h-[200px]  w-[300px]  mx-auto rounded-tl-3xl rounded-tr-3xl rounded-br-2xl rounded-bl-2xl sm:w-[350px] md:w-[450px] lg:w-full lg:mx-6 max-w-[400px]">
             <div className="h-[70px] w-full bg-questions_bg_2 rounded-tl-2xl rounded-tr-2xl flex items-baseline pt-5">
               <Image
                 className="ml-6"
@@ -53,7 +53,7 @@ const QuestionsSection = () => {
               Who do we want to reach, and how will we reach them?
             </p>
           </div>
-          <div className="relative bg-questions_bg_1 h-[200px]  w-[350px]  mx-auto rounded-tl-3xl rounded-tr-3xl rounded-br-2xl rounded-bl-2xl md:w-[450px] lg:w-full lg:mx-6 max-w-[400px]">
+          <div className="relative bg-questions_bg_1 h-[200px] w-[300px]  mx-auto rounded-tl-3xl rounded-tr-3xl rounded-br-2xl rounded-bl-2xl sm:w-[350px] md:w-[450px] lg:w-full lg:mx-6 max-w-[400px]">
             <div className="h-[70px] w-full bg-questions_bg_2 rounded-tl-2xl rounded-tr-2xl flex items-baseline pt-5">
               <Image
                 className="ml-6"
