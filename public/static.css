@@ -1,0 +1,168 @@
+:root {
+    --ground-bg-h: 672px;
+    --ground-bg-w: 1920px;
+    --ground-bg-disp: 32px;
+    --ground-bg-bottom: calc(0px - calc(var(--ground-bg-h) - var(--ground-bg-disp)));
+    --ground-bg-top: calc(0px - var(--ground-bg-disp));
+    --ground-bg-right: -80px;
+}
+
+html {
+    background: linear-gradient(180deg, #ae4f00 0%, #6e3001 50%);
+    color: rgb(255 255 255);
+    height: 100vh;
+}
+
+
+body {
+    background-image: url("assets/svg/cloud_1.svg"), url("assets/svg/cloud_2.svg");
+    background-position: top -10px left -50px, top 280px right 50px;
+    background-size: 70%, 30%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin: border-box;
+
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "Saira", sans-serif;
+    padding: 20px 0;
+}
+
+h1, h2 {
+    font-weight: 600;
+}
+
+h1 {
+    font-family: Garamond, serif;
+    color: rgb(255 155 74);
+    font-size: 3rem;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section, header, footer {
+    padding: 0 30px;
+}
+
+section.intro {
+    background-image: url("assets/svg/ground_bg.svg"), url("assets/webp/trees.webp"), url("assets/webp/man_woman.webp"), url("assets/svg/sun_bg.svg");
+    background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right), bottom left, right 50px bottom -5px, right bottom; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: var(--ground-bg-w) var(--ground-bg-h), 25%, 70%, contain;
+    padding-top: 30%;
+    padding-bottom: 525px;
+    background-clip: border-box;
+    background-origin: border-box;
+    position: relative;
+    bottom: -2px;
+}
+
+section.intro h2, section.intro p {
+    padding-top: 50px;
+}
+
+section.features {
+    background-image: url("assets/svg/ground_bg.svg"), linear-gradient(180deg, #e5770c 0%, #472603 10%);
+    background-position: top var(--ground-bg-top) right var(--ground-bg-right), bottom;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin: border-box;
+    background-size: var(--ground-bg-w) var(--ground-bg-h), 100%;
+}
+
+section.features, section.questions div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section.features article h2 {
+    color: hsl(31, 100%, 20%);
+}
+
+section.features article p {
+    color: hsl(31, 100%, 30%);
+}
+
+section.features article.one {
+    background-image: url("assets/svg/text_cloud_1.svg");
+}
+
+section.features article.two {
+    background-image: url("assets/svg/text_cloud_2.svg");
+}
+
+section.features article.three {
+    background-image: url("assets/svg/text_cloud_3.svg");
+}
+
+section.features article.four {
+    background-image: url("assets/svg/text_cloud_4.svg");
+}
+
+section article {
+    margin: 40px;
+    padding: 180px 20px 100px 20px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 60px;
+}
+
+section article > * {
+    padding: 0 80px 80px 80px;
+}
+
+section.questions h2 {
+    width: 100%;
+    text-align: center;
+}
+
+footer h2 {
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 992px) {
+    body {
+        background-position: top left 100px, top 120px right 50px;
+        background-size: 30%, 20%;
+    }
+
+    section.intro {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-right: 60%;
+        background-size: var(--ground-bg-w) var(--ground-bg-h), 25%, 50%, contain;
+        background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right), bottom left, right 50px bottom -5px, right bottom -200px;
+    }
+
+    section article {
+        padding: 100px 20px 50px 20px;
+        width: 300px;
+        margin: 10px;
+    }
+
+    section article > * {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    section article {
+        width: 250px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    h2, h3, p {
+        font-size: 1.2rem;
+    }
+}
