@@ -1,23 +1,28 @@
 :root {
-    --ground-bg-h: 672px;
-    --ground-bg-w: 1920px;
-    --ground-bg-disp: 32px;
-    --ground-bg-bottom: calc(0px - calc(var(--ground-bg-h) - var(--ground-bg-disp)));
-    --ground-bg-top: calc(0px - var(--ground-bg-disp));
-    --ground-bg-right: -80px;
+    --ground-bg-h: 300px;
+    --ground-bg-w: 1000px;
+    --ground-bg-overlap-h: 15px;
+    --ground-bg-bottom: calc(0px - (var(--ground-bg-h) - var(--ground-bg-overlap-h)));
+    --ground-bg-top: calc(2px - var(--ground-bg-overlap-h));
+    --ground-bg-right: -100px;
+
+    --cloud-baseline: 110px;
+    --cloud-1-h: 90px;
+    --cloud-2-h: 45px;
+    --cloud-1-disp: calc(var(--cloud-baseline) - var(--cloud-1-h));
+    --cloud-2-disp: calc(var(--cloud-baseline) - var(--cloud-2-h));
 }
 
 html {
-    background: linear-gradient(180deg, #ae4f00 0%, #6e3001 50%);
-    color: rgb(255 255 255);
-    height: 100vh;
+    background-size: 100%;
+    background: #6e3001 linear-gradient(180deg, #ae4f00 0%, #6e3001 50%) no-repeat;
+    color: #FFFFFF;
 }
-
 
 body {
     background-image: url("assets/svg/cloud_1.svg"), url("assets/svg/cloud_2.svg");
-    background-position: top -10px left -50px, top 280px right 50px;
-    background-size: 70%, 30%;
+    background-position: top var(--cloud-1-disp) right 90%, top calc(15px + var(--cloud-2-disp)) right 7%;
+    background-size: auto var(--cloud-1-h), auto var(--cloud-2-h);
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
@@ -35,8 +40,7 @@ h1, h2 {
 h1 {
     font-family: Garamond, serif;
     color: rgb(255 155 74);
-    font-size: 3rem;
-
+    font-size: 2rem;
 }
 
 nav {
@@ -45,30 +49,41 @@ nav {
     align-items: center;
 }
 
+main {
+    background-image: url("assets/svg/sun_bg.svg");
+    background-size: contain;
+    background-position: top 400px right;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin: border-box;
+
+}
+
 section, header, footer {
-    padding: 0 30px;
+    padding: 0 15px;
 }
 
 section.intro {
-    background-image: url("assets/svg/ground_bg.svg"), url("assets/webp/trees.webp"), url("assets/webp/man_woman.webp"), url("assets/svg/sun_bg.svg");
-    background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right), bottom left, right 50px bottom -5px, right bottom; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: var(--ground-bg-w) var(--ground-bg-h), 25%, 70%, contain;
-    padding-top: 30%;
-    padding-bottom: 525px;
+    background-image: url("assets/svg/ground_bg.svg"), url("assets/webp/man_woman.webp"), url("assets/webp/trees.webp");
+    background-size: var(--ground-bg-w) var(--ground-bg-h), 70%, 25%;
+    background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right), right 50px bottom , bottom left;
+    background-repeat: no-repeat;
+    padding-top: 20%;
+    padding-bottom: 50%;
     background-clip: border-box;
     background-origin: border-box;
+    /*hack - can't seem to get rid of a line between sections without doing this */
     position: relative;
     bottom: -2px;
 }
 
 section.intro h2, section.intro p {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 section.features {
-    background-image: url("assets/svg/ground_bg.svg"), linear-gradient(180deg, #e5770c 0%, #472603 10%);
-    background-position: top var(--ground-bg-top) right var(--ground-bg-right), bottom;
+    background-image: url("assets/svg/ground_bg.svg"), linear-gradient(180deg, rgba(0, 0, 0, 0) 100px, #472603 -100px);
+    background-position: top var(--ground-bg-top) right var(--ground-bg-right), top right;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
@@ -76,18 +91,17 @@ section.features {
 }
 
 section.features, section.questions div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 section.features article h2 {
-    color: hsl(31, 100%, 20%);
+    color: hsl(31, 100%, 10%);
 }
 
 section.features article p {
-    color: hsl(31, 100%, 30%);
+    color: hsl(31, 100%, 25%);
 }
 
 section.features article.one {
@@ -107,17 +121,17 @@ section.features article.four {
 }
 
 section article {
-    margin: 40px;
-    padding: 180px 20px 100px 20px;
-    flex-shrink: 0;
-    flex-grow: 1;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 60px;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 60px 20px 50px 20px;
+    width: 200px;
+    height: 150px;
 }
 
 section article > * {
-    padding: 0 80px 80px 80px;
+    padding-bottom: 20px;
 }
 
 section.questions h2 {
@@ -129,40 +143,58 @@ footer h2 {
     text-align: center;
 }
 
+@media only screen and (min-width: 560px) {
+    section.features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
-@media only screen and (min-width: 992px) {
-    body {
-        background-position: top left 100px, top 120px right 50px;
-        background-size: 30%, 20%;
+@media only screen and (min-width: 685px) {
+
+
+    main {
+        background-position: top 220px right;
     }
 
     section.intro {
-        padding-top: 10%;
-        padding-bottom: 10%;
+        padding-bottom: 12%;
         padding-right: 60%;
-        background-size: var(--ground-bg-w) var(--ground-bg-h), 25%, 50%, contain;
-        background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right), bottom left, right 50px bottom -5px, right bottom -200px;
+        background-size: var(--ground-bg-w) var(--ground-bg-h), 50%, 15%;
+        background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right), right 50px bottom -5px, bottom left;
     }
 
-    section article {
-        padding: 100px 20px 50px 20px;
-        width: 300px;
-        margin: 10px;
-    }
-
-    section article > * {
-        padding: 10px;
+    :root {
+        --cloud-baseline: 140px;
+        --cloud-1-h: 150px;
+        --cloud-2-h: 70px;
     }
 }
 
-@media only screen and (min-width: 1440px) {
-    section article {
-        width: 250px;
+@media only screen and (min-width: 815px) {
+    :root {
+        --ground-bg-overlap-h: 32px;
+        --ground-bg-h: 400px;
+        --ground-bg-w: 1250px;
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 990px) {
+    :root {
+        --ground-bg-h: 672px;
+        --ground-bg-w: 1910px;
+    }
+
     h2, h3, p {
         font-size: 1.2rem;
+    }
+
+    section.intro {
+        padding-top: 15%;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    section.features {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
