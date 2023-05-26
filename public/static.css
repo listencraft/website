@@ -7,6 +7,9 @@
   );
   --ground-bg-top: calc(2px - var(--ground-bg-overlap-h));
   --ground-bg-right: -100px;
+  --ground-bottom-bg-top: 110px;
+  --ground-bottom-top-color: #462604;
+  --bottom-gradient-height: 26%;
 
   --cloud-baseline: 110px;
   --cloud-1-h: 90px;
@@ -37,7 +40,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 600;
 }
 
@@ -126,6 +130,7 @@ section.questions div {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  align-items: center;
 }
 
 section.features article h2 {
@@ -166,9 +171,68 @@ section article > * {
   padding-bottom: 20px;
 }
 
+section.questions {
+  background: url("assets/svg/brown_bottom_bg.svg"),
+    linear-gradient(
+      180deg,
+      var(--ground-bottom-top-color) 0%,
+      var(--ground-bottom-top-color) var(--bottom-gradient-height),
+      #613506 var(--bottom-gradient-height),
+      #613506 100%
+    );
+  background-position: top var(--ground-bottom-bg-top) right 0, top 0 right 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-size: 100% auto, cover;
+}
+
 section.questions h2 {
   width: 100%;
+  padding: 50px 0;
   text-align: center;
+  color: #ef8e21;
+  font-weight: 200;
+}
+
+section.questions article {
+  background-color: #fbe2ba;
+  border-radius: 25px;
+  margin: 10px;
+  padding: 0 60px 0 0;
+  width: 225px;
+  height: 180px;
+}
+
+section.questions article h3 {
+  color: #ef8e21;
+  font-weight: bold;
+  border-radius: 25px 25px 0px 0px;
+  background-color: #221202;
+  background-position: 20px 20px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-origin: border-box;
+  width: 100%;
+  padding: 30px 0 10px 60px;
+}
+
+section.questions article.one h3 {
+  background-image: url("assets/svg/principles_icon.svg");
+}
+
+section.questions article.two h3 {
+  background-image: url("assets/svg/audience_icon.svg");
+}
+
+section.questions article.three h3 {
+  background-image: url("assets/svg/technology_icon.svg");
+}
+
+section.questions article p {
+  color: #000000;
+  padding: 20px 20px 0 20px;
 }
 
 footer h2 {
@@ -178,6 +242,10 @@ footer h2 {
 @media only screen and (min-width: 560px) {
   section.features {
     grid-template-columns: 1fr 1fr;
+  }
+
+  :root {
+    --bottom-gradient-height: 35%;
   }
 }
 
@@ -199,6 +267,7 @@ footer h2 {
     --cloud-baseline: 140px;
     --cloud-1-h: 150px;
     --cloud-2-h: 70px;
+    --bottom-gradient-height: 40%;
   }
 }
 
@@ -214,6 +283,8 @@ footer h2 {
   :root {
     --ground-bg-h: 672px;
     --ground-bg-w: 1910px;
+    --ground-bottom-bg-top: 90px;
+    --ground-bottom-top-color: #412303;
   }
 
   h2,
@@ -222,13 +293,38 @@ footer h2 {
     font-size: 1.2rem;
   }
 
+  .button {
+    font-size: 1rem;
+  }
+
   section.intro {
     padding-top: 15%;
+  }
+
+  section.questions article {
+    height: 220px;
   }
 }
 
 @media only screen and (min-width: 1050px) {
   section.features {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  section.questions div {
+    grid-template-columns: repeat(3, auto);
+    height: 360px;
+  }
+
+  :root {
+    --ground-bottom-top-color: #2b1604;
+    --bottom-gradient-height: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  section.questions div {
+    grid-template-columns: repeat(3, auto);
+    margin: 0 160px;
   }
 }
