@@ -5,9 +5,9 @@
   --ground-bg-bottom: calc(
     0px - (var(--ground-bg-h) - var(--ground-bg-overlap-h))
   );
-  --ground-bg-top: calc(2px - var(--ground-bg-overlap-h));
+  --ground-bg-top: calc(0px - var(--ground-bg-overlap-h));
   --ground-bg-right: -100px;
-  --ground-bottom-bg-top: 110px;
+  --ground-bottom-bg-top: 7rem;
   --ground-bottom-top-color: #462604;
   --bottom-gradient-height: 26%;
 
@@ -36,7 +36,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   font-family: "Saira", sans-serif;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
 }
 
 h1,
@@ -60,7 +60,7 @@ nav {
 main {
   background-image: url("assets/svg/sun_bg.svg");
   background-size: contain;
-  background-position: top 440px right;
+  background-position: top 28rem right;
   background-repeat: no-repeat;
   background-clip: border-box;
   background-origin: border-box;
@@ -98,9 +98,6 @@ section.intro {
   padding-bottom: 50%;
   background-clip: border-box;
   background-origin: border-box;
-  /*hack - can't seem to get rid of a line between sections without doing this */
-  position: relative;
-  bottom: -2px;
 }
 
 section.intro h2,
@@ -235,13 +232,34 @@ section.questions article p {
   padding: 20px 20px 0 20px;
 }
 
-footer h2 {
+footer {
   text-align: center;
+  padding: 50px 15px;
+  background-color: #633507;
+}
+
+footer h2 {
+  color: #e86805;
+}
+
+footer p {
+  color: #ff9b4a;
+  padding-top: 20px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+footer a {
+  color: #ff9b4a;
 }
 
 @media only screen and (min-width: 560px) {
   section.features {
     grid-template-columns: 1fr 1fr;
+  }
+
+  footer p {
+    width: 400px;
   }
 
   :root {
@@ -251,7 +269,7 @@ footer h2 {
 
 @media only screen and (min-width: 685px) {
   main {
-    background-position: top 220px right;
+    background-position: top 19rem right;
   }
 
   section.intro {
@@ -283,12 +301,15 @@ footer h2 {
   :root {
     --ground-bg-h: 672px;
     --ground-bg-w: 1910px;
-    --ground-bottom-bg-top: 90px;
+    --ground-bottom-bg-top: 5rem;
     --ground-bottom-top-color: #412303;
   }
 
   h2,
-  h3,
+  h3 {
+    font-size: 1.4rem;
+  }
+
   p {
     font-size: 1.2rem;
   }
