@@ -13,6 +13,7 @@ This project consists of the following files:
 
 ## Getting Started
 
-To get started with the project, simply open the index.html file in a web browser. The styles defined in style.css will be applied to the HTML elements in the index.html file. The reset.css file ensures consistent styling across different web browsers.
+To get started with the project, simply open the index.html file in a web browser. The styles defined 
+in style.css will be applied to the HTML elements in the index.html file. The reset.css file ensures 
+consistent styling across different web browsers.
 
-## Deployed Website on Vercel
