@@ -9,9 +9,9 @@
     --ground-bottom-top-color: #462604;
     --bottom-gradient-height: 26%;
 
-    --cloud-baseline: calc(110px + 1rem);
-    --cloud-1-h: 90px;
-    --cloud-2-h: 45px;
+    --cloud-baseline: calc(80px + 1rem);
+    --cloud-1-h: 70px;
+    --cloud-2-h: 30px;
     --cloud-1-disp: calc(var(--cloud-baseline) - var(--cloud-1-h));
     --cloud-2-disp: calc(var(--cloud-baseline) - var(--cloud-2-h));
 }
