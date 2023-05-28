@@ -55,6 +55,17 @@ nav {
     align-items: center;
 }
 
+nav h2 {
+    background-image: url("../png/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin: border-box;
+    padding-left: 38px;
+    padding-top: 7px;
+    height: 35px;
+}
+
 main {
     background-image: url("../svg/sun_bg.svg");
     background-size: contain;
