@@ -59,34 +59,63 @@ nav ul {
     align-items: center;
 }
 
-header nav ul li a {
+header nav ul.large-screen {
+    display: none;
+}
+
+header nav li.home a {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+header nav a {
     background-size: contain;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
-    padding: 7px 0 4px 30px;
+    padding: 7px 0 4px 20px;
+    font-size: 0.8rem;
 }
 
-nav ul li.home a {
+header nav li.hamburger button {
+    padding-left: 5px;
+}
+
+header nav li.hamburger img {
+    height: 25px;
+}
+
+header nav li.home a {
     background-image: url("../png/logo.png");
 }
 
-nav ul li.share {
+nav li.try {
     margin-left: auto;
+}
+
+nav li {
     margin-right: 17px;
 }
 
-nav ul li.share button {
+nav ul li.try a {
+    background-image: url("../svg/rocket-solid.svg");
+}
+
+nav ul li.share  button {
+    background-image: url("../svg/share-nodes-solid.svg");
+}
+
+header nav  button {
     cursor: pointer;
     border: none;
     color: inherit;
     background-color: transparent;
-    background-image: url("../svg/share-nodes-solid.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
     padding: 4px 0 4px 30px;
+    font-size: 0.8rem;
 }
 
 main {
@@ -292,6 +321,20 @@ footer nav ul {
 }
 
 @media only screen and (min-width: 560px) {
+
+    header nav a, header nav button {
+        font-size: 1rem;
+        padding-left: 32px;
+    }
+
+    header nav ul.large-screen {
+        display: flex;
+    }
+
+    header nav ul.small-screen {
+        display: none;
+    }
+
     section.features {
         grid-template-columns: 1fr 1fr;
     }
