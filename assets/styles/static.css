@@ -37,6 +37,10 @@ body {
     padding: 20px 0 0 0;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 h1,
 h2,
 h3 {
@@ -49,21 +53,40 @@ h1 {
     font-size: 2rem;
 }
 
-nav {
+nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav h2 {
-    background-image: url("../png/logo.png");
+header nav ul li a {
     background-size: contain;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
-    padding-left: 38px;
-    padding-top: 7px;
-    height: 30px;
+    padding: 7px 0 4px 30px;
+}
+
+nav ul li.home a {
+    background-image: url("../png/logo.png");
+}
+
+nav ul li.share {
+    margin-left: auto;
+    margin-right: 17px;
+}
+
+nav ul li.share button {
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    background-image: url("../svg/share-nodes-solid.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin: border-box;
+    padding: 4px 0 4px 30px;
 }
 
 main {
@@ -93,6 +116,7 @@ footer {
 
 .button:hover {
     background-color: #1f1209;
+    text-decoration: none;
 }
 
 section.intro {
@@ -236,7 +260,7 @@ section.questions article p {
 
 footer {
     text-align: center;
-    padding: 50px 15px;
+    padding: 50px 0 15px 0;
     background-color: #633507;
 }
 
@@ -246,13 +270,25 @@ footer h2 {
 
 footer p {
     color: #ff9b4a;
-    padding-top: 20px;
-    width: 280px;
+    padding: 20px 0;
     margin: 0 auto;
 }
 
 footer a {
-    color: #ff9b4a;
+    color: #ffb980;
+}
+
+footer nav a {
+    background-image: url("../svg/github-mark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+footer nav ul {
+    justify-content: center;
 }
 
 @media only screen and (min-width: 560px) {
