@@ -45,7 +45,7 @@ h3 {
 
 h1 {
     font-family: Garamond, serif;
-    color: rgb(255 155 74);
+    color: #f9a027;
     font-size: 2rem;
 }
 
@@ -104,7 +104,11 @@ nav ul.hamburger-menu li.hamburger img {
     height: 25px;
 }
 
-header nav li.home a {
+header li.contact {
+    padding-bottom: 8px;
+}
+
+header li.home a {
     font-weight: 600;
     font-size: 1.2rem;
     background-image: url("../png/logo.png");
@@ -145,7 +149,7 @@ header nav button, header nav a {
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
-    padding: 0 0 4px 30px;
+    padding-left: 25px;
 }
 
 main {
@@ -354,7 +358,6 @@ footer nav ul {
 
     header a, header button {
         font-size: 1rem;
-        padding-left: 32px;
     }
 
     header ul.large-screen {
@@ -380,8 +383,7 @@ footer nav ul {
 
 @media only screen and (min-width: 685px) {
     main {
-        background-position: top var(--cloud-1-disp) right 90%,
-    top calc(15px + var(--cloud-2-disp)) right 7%, top 19rem right;
+        background-position: top var(--cloud-1-disp) right 90%, top calc(15px + var(--cloud-2-disp)) right 7%, top 19rem right;
     }
 
     section.intro {

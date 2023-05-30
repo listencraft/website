@@ -5,6 +5,7 @@
     <title>Listencraft</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="description" content="Learn the art of good listening">
+    <meta name="theme-color" content="#ae4f00" />
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/static.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
@@ -24,7 +25,7 @@
     gtag('config', 'G-5FH6CDTH42');
 </script>
 <script>
-    function showHamburger() {
+    function toggleHamburger() {
         const header = document.getElementById("header");
         if (header.className === "hamburger") {
             header.className = "show-hamburger";
@@ -38,16 +39,16 @@
     <nav>
         <ul class="small-screen">
             <li class="hamburger">
-                <button onclick="showHamburger()"><img src="assets/svg/bars-solid.svg" alt="A hamburger menu button"></button>
+                <button onclick="toggleHamburger()"><img src="assets/svg/bars-solid.svg" alt="A hamburger menu button"></button>
             </li>
-            <li><a class="button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
+            <li class="contact"><a class="button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
                 Contact Us
             </a>
             </li>
         </ul>
         <ul class="hamburger-menu">
             <li class="hamburger">
-                <button onclick="showHamburger()"><img src="assets/svg/bars-solid.svg" alt="A hamburger menu button"></button>
+                <button onclick="toggleHamburger()"><img src="assets/svg/bars-solid.svg" alt="A hamburger menu button"></button>
             </li>
             <li class="try">
                 <a href="/">Try it out!</a>
@@ -83,7 +84,7 @@
             skills: to help each other, and to make the world a more sensitive
             place.</p>
         <a class="button contact-button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
-            Contact
+            Sign me up!
         </a>
     </section>
     <section class="features">
