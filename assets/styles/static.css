@@ -9,7 +9,7 @@
     --ground-bottom-top-color: #462604;
     --bottom-gradient-height: 26%;
 
-    --cloud-baseline: calc(80px + 1rem);
+    --cloud-baseline: calc(40px + 1rem);
     --cloud-1-h: 70px;
     --cloud-2-h: 30px;
     --cloud-1-disp: calc(var(--cloud-baseline) - var(--cloud-1-h));
@@ -23,10 +23,6 @@ html {
 }
 
 body {
-    background-image: url("../svg/cloud_1.svg"), url("../svg/cloud_2.svg");
-    background-position: top var(--cloud-1-disp) right 90%,
-    top calc(15px + var(--cloud-2-disp)) right 7%;
-    background-size: auto var(--cloud-1-h), auto var(--cloud-2-h);
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
@@ -34,7 +30,7 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     font-family: "Saira", sans-serif;
-    padding: 20px 0 0 0;
+    padding:0;
 }
 
 a:hover {
@@ -53,39 +49,64 @@ h1 {
     font-size: 2rem;
 }
 
+header {
+    padding: 15px 15px 0 15px;
+}
+
+header.show-hamburger {
+    background-color: #472603;
+}
+
+header ul.large-screen, header.hamburger ul.hamburger-menu, header.show-hamburger ul.small-screen {
+    display: none;
+}
+
+header.show-hamburger nav ul.hamburger-menu {
+      display: flex;
+  }
+
 nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header nav ul.large-screen {
-    display: none;
+header ul.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 15px;
+}
+
+header li.hamburger {
+    align-self: flex-start;
+}
+
+header li.hamburger button {
+    padding-left: 5px;
+}
+
+header li.hamburger img {
+    height: 25px;
+}
+
+header.hamburger ul.hamburger-menu li.hamburger img {
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+header.show-hamburger ul.hamburger-menu li.hamburger img {
+    transform: rotate(90deg);
+    transition: 1s;
+}
+
+nav ul.hamburger-menu li.hamburger img {
+    height: 25px;
 }
 
 header nav li.home a {
     font-weight: 600;
     font-size: 1.2rem;
-}
-
-header nav a {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-origin: border-box;
-    padding: 7px 0 4px 20px;
-    font-size: 0.8rem;
-}
-
-header nav li.hamburger button {
-    padding-left: 5px;
-}
-
-header nav li.hamburger img {
-    height: 25px;
-}
-
-header nav li.home a {
     background-image: url("../png/logo.png");
 }
 
@@ -93,8 +114,17 @@ nav li.try {
     margin-left: auto;
 }
 
+nav ul.hamburger-menu li {
+    font-size: 1rem;
+    width: 100px;
+    padding-top: 0;
+    margin-left: 0;
+}
+
 nav li {
     margin-right: 17px;
+    font-size: 0.8rem;
+    margin-top: 15px;
 }
 
 nav ul li.try a {
@@ -105,30 +135,30 @@ nav ul li.share  button {
     background-image: url("../svg/share-nodes-solid.svg");
 }
 
-header nav  button {
+header nav button, header nav a {
     cursor: pointer;
     border: none;
     color: inherit;
+    display: block;
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
-    padding: 4px 0 4px 30px;
-    font-size: 0.8rem;
+    padding: 0 0 4px 30px;
 }
 
 main {
-    background-image: url("../svg/sun_bg.svg");
-    background-size: contain;
-    background-position: top 28rem right;
+    background-image:  url("../svg/cloud_1.svg"), url("../svg/cloud_2.svg"), url("../svg/sun_bg.svg");
+    background-size: auto var(--cloud-1-h), auto var(--cloud-2-h), contain;
+    background-position: top var(--cloud-1-disp) right 90%,
+    top calc(15px + var(--cloud-2-disp)) right 7%, top 28rem right;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
 }
 
 section,
-header,
 footer {
     padding: 0 15px;
 }
@@ -300,7 +330,7 @@ footer h2 {
 footer p {
     color: #ff9b4a;
     padding: 20px 0;
-    margin: 0 auto;
+    margin: 0 15px;
 }
 
 footer a {
@@ -322,25 +352,25 @@ footer nav ul {
 
 @media only screen and (min-width: 560px) {
 
-    header nav a, header nav button {
+    header a, header button {
         font-size: 1rem;
         padding-left: 32px;
     }
 
-    header nav ul.large-screen {
+    header ul.large-screen {
         display: flex;
     }
 
-    header nav ul.small-screen {
-        display: none;
+    header.show-hamburger {
+        background-color: transparent;
+    }
+
+    header ul.small-screen, header ul.hamburger-menu {
+        display: none !important;
     }
 
     section.features {
         grid-template-columns: 1fr 1fr;
-    }
-
-    footer p {
-        width: 400px;
     }
 
     :root {
@@ -350,7 +380,8 @@ footer nav ul {
 
 @media only screen and (min-width: 685px) {
     main {
-        background-position: top 19rem right;
+        background-position: top var(--cloud-1-disp) right 90%,
+    top calc(15px + var(--cloud-2-disp)) right 7%, top 19rem right;
     }
 
     section.intro {
@@ -362,7 +393,7 @@ footer nav ul {
     }
 
     :root {
-        --cloud-baseline: calc(140px + 1rem);
+        --cloud-baseline: calc(90px + 1rem);
         --cloud-1-h: 150px;
         --cloud-2-h: 70px;
         --bottom-gradient-height: 40%;
