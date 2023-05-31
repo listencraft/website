@@ -30,7 +30,7 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     font-family: "Saira", sans-serif;
-    padding:0;
+    padding: 0;
 }
 
 a:hover {
@@ -61,9 +61,9 @@ header.show-hamburger {
     display: none;
 }
 
-header.show-hamburger li.try, header.show-hamburger li.share  {
-      display: block;
-  }
+header.show-hamburger li.try, header.show-hamburger li.share {
+    display: block;
+}
 
 nav ul {
     display: flex;
@@ -108,20 +108,19 @@ header.hamburger li.hamburger img {
     transition: 0.2s;
 }
 
-nav ul.hamburger-menu li.hamburger img {
-    height: 25px;
-}
-
-header li.home {
+.iconified {
     background-image: url("../png/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
-/*nothing just to get netlify to run*/
+
+section.intro h1.iconified {
+    padding-left: 2rem
+}
+
 header li.home a {
     font-weight: 600;
     font-size: 1.4rem;
-    margin-left: 8px;
 }
 
 header.hamburger li.try {
@@ -131,14 +130,14 @@ header.hamburger li.try {
 nav li {
     margin-right: 17px;
     font-size: 0.8rem;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 nav ul li.try a {
     background-image: url("../svg/rocket-solid.svg");
 }
 
-nav ul li.share  button {
+nav ul li.share button {
     background-image: url("../svg/share-nodes-solid.svg");
 }
 
@@ -156,7 +155,7 @@ header nav button, header nav a {
 }
 
 main {
-    background-image:  url("../svg/cloud_1.svg"), url("../svg/cloud_2.svg"), url("../svg/sun_bg.svg");
+    background-image: url("../svg/cloud_1.svg"), url("../svg/cloud_2.svg"), url("../svg/sun_bg.svg");
     background-size: auto var(--cloud-1-h), auto var(--cloud-2-h), contain;
     background-position: top var(--cloud-1-disp) right 90%,
     top calc(15px + var(--cloud-2-disp)) right 7%, top 28rem right;
@@ -368,6 +367,13 @@ footer nav ul {
 }
 
 @media only screen and (min-width: 560px) {
+
+
+
+    section.intro h1.iconified {
+        padding-left: 0;
+        background-image: none;
+    }
 
     header a, header button {
         font-size: 1rem;
