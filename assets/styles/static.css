@@ -117,7 +117,7 @@ header li.home {
     background-size: contain;
     background-repeat: no-repeat;
 }
-/*nothing just to get netlify to run*/
+
 header li.home a {
     font-weight: 600;
     font-size: 1.4rem;
