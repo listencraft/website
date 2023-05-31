@@ -114,6 +114,39 @@ nav ul.hamburger-menu li.hamburger img {
 
 header li.home {
     background-image: url("../png/logo.png");
+}
+
+nav li.try {
+    margin-left: auto;
+}
+
+nav ul.hamburger-menu li {
+    font-size: 1rem;
+    width: 100px;
+    padding-top: 0;
+    margin-left: 0;
+}
+
+nav li {
+    margin-right: 17px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+nav ul li.try a {
+    background-image: url("../svg/rocket-solid.svg");
+}
+
+nav ul li.share  button {
+    background-image: url("../svg/share-nodes-solid.svg");
+}
+
+header nav button, header nav a {
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    display: block;
+    background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -407,7 +440,8 @@ footer nav ul {
 
 @media only screen and (min-width: 685px) {
     main {
-        background-position: top var(--cloud-1-disp) right 90%, top calc(15px + var(--cloud-2-disp)) right 7%, top 19rem right;
+        background-position: top var(--cloud-1-disp) right 90%,
+    top calc(15px + var(--cloud-2-disp)) right 7%, top 19rem right;
     }
 
     section.intro {
