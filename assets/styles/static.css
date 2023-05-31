@@ -76,7 +76,7 @@ header.show-hamburger ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 header.show-hamburger li {
@@ -110,10 +110,6 @@ header.hamburger li.hamburger img {
 
 nav ul.hamburger-menu li.hamburger img {
     height: 25px;
-}
-
-header li.contact {
-    padding-bottom: 8px;
 }
 
 header li.home {
@@ -157,14 +153,6 @@ header nav button, header nav a {
     background-clip: border-box;
     background-origin: border-box;
     padding-left: 25px;
-}
-
-header.show-hamburger li.contact a {
-    margin-bottom: 0;
-}
-
-header li.contact a {
-    margin-bottom: -10px;
 }
 
 main {
