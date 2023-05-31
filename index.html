@@ -5,6 +5,7 @@
     <title>Listencraft</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="description" content="Learn the art of good listening">
+    <meta name="theme-color" content="#ae4f00"/>
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/static.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
@@ -24,7 +25,7 @@
     gtag('config', 'G-5FH6CDTH42');
 </script>
 <script>
-    function showHamburger() {
+    function toggleHamburger() {
         const header = document.getElementById("header");
         if (header.className === "hamburger") {
             header.className = "show-hamburger";
@@ -36,41 +37,25 @@
 <body>
 <header id="header" class="hamburger">
     <nav>
-        <ul class="small-screen">
-            <li class="hamburger">
-                <button onclick="showHamburger()"><img src="assets/svg/bars-solid.svg" alt="A hamburger menu button"></button>
+        <ul>
+            <li class="home large-screen">
+                <a href="/">Listencraft</a>
             </li>
-            <li><a class="button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
+            <li class="hamburger small-screen">
+                <button onclick="toggleHamburger()"><img src="assets/svg/bars-solid.svg" alt="A hamburger menu button">
+                </button>
+            </li>
+            <li class="try large-screen">
+                <a href="/">Try it out!</a>
+            </li>
+            <li class="share large-screen">
+                <button>Share</button>
+            </li>
+            <li class="contact"><a class="button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
                 Contact Us
             </a>
             </li>
-        </ul>
-        <ul class="hamburger-menu">
-            <li class="hamburger">
-                <button onclick="showHamburger()"><img src="assets/svg/bars-solid.svg" alt="A hamburger menu button"></button>
-            </li>
-            <li class="try">
-                <a href="/">Try it out!</a>
-            </li>
-            <li class="share">
-                <button>Share</button>
-            </li>
-            <li><a class="button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
-                Contact Us
-            </a></li>
-        </ul>
-        <ul class="large-screen">
-            <li class="home">
-                <a href="/">Listencraft</a></li>
-            <li class="try">
-                <a href="/">Try it out!</a>
-            </li>
-            <li class="share">
-                <button>Share</button>
-            </li>
-            <li><a class="button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
-                Contact Us
-            </a></li>
+
         </ul>
     </nav>
 </header>
@@ -83,7 +68,7 @@
             skills: to help each other, and to make the world a more sensitive
             place.</p>
         <a class="button contact-button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
-            Contact
+            Sign me up!
         </a>
     </section>
     <section class="features">
@@ -107,6 +92,9 @@
     </section>
     <section class="questions">
         <h2>Below are some questions that need answering. Can you help answer them?</h2>
+        <a class="button contact-button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
+            I want to contribute!
+        </a>
         <div>
             <article class="one">
                 <h3>Principles</h3>

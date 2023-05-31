@@ -45,7 +45,7 @@ h3 {
 
 h1 {
     font-family: Garamond, serif;
-    color: rgb(255 155 74);
+    color: #f9a027;
     font-size: 2rem;
 }
 
@@ -57,25 +57,33 @@ header.show-hamburger {
     background-color: #472603;
 }
 
-header ul.large-screen, header.hamburger ul.hamburger-menu, header.show-hamburger ul.small-screen {
+.large-screen {
     display: none;
 }
 
-header.show-hamburger nav ul.hamburger-menu {
-      display: flex;
+header.show-hamburger li.try, header.show-hamburger li.share  {
+      display: block;
   }
 
 nav ul {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-header ul.hamburger-menu {
+header.show-hamburger ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+header.show-hamburger li {
+    font-size: 1rem;
+    width: 100px;
+    padding-top: 0;
+    margin-left: 0;
 }
 
 header li.hamburger {
@@ -90,23 +98,21 @@ header li.hamburger img {
     height: 25px;
 }
 
-header.hamburger ul.hamburger-menu li.hamburger img {
-    transform: rotate(0deg);
-    transition: 1s;
+header.show-hamburger li.hamburger img {
+    transform: rotate(90deg);
+    transition: 0.2s;
 }
 
-header.show-hamburger ul.hamburger-menu li.hamburger img {
-    transform: rotate(90deg);
-    transition: 1s;
+header.hamburger li.hamburger img {
+    transform: rotate(0deg);
+    transition: 0.2s;
 }
 
 nav ul.hamburger-menu li.hamburger img {
     height: 25px;
 }
 
-header nav li.home a {
-    font-weight: 600;
-    font-size: 1.2rem;
+header li.home {
     background-image: url("../png/logo.png");
 }
 
@@ -143,9 +149,43 @@ header nav button, header nav a {
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+header li.home a {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-left: 8px;
+}
+
+header.hamburger li.try {
+    margin-left: auto;
+}
+
+nav li {
+    margin-right: 17px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+nav ul li.try a {
+    background-image: url("../svg/rocket-solid.svg");
+}
+
+nav ul li.share  button {
+    background-image: url("../svg/share-nodes-solid.svg");
+}
+
+header nav button, header nav a {
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    display: block;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
-    padding: 0 0 4px 30px;
+    padding-left: 25px;
 }
 
 main {
@@ -170,11 +210,11 @@ footer {
     background-color: #f9a027;
     padding: 5px 15px;
     border-radius: 50px;
-    transition: all ease-in-out 400ms;
+    transition: background-color ease-in-out 400ms;
 }
 
 .button:hover {
-    background-color: #1f1209;
+    background-color: #100f0f;
     text-decoration: none;
 }
 
@@ -194,10 +234,12 @@ section.intro p {
     padding-top: 20px;
 }
 
-section.intro .contact-button {
+section .contact-button {
     display: inline-block;
     background-color: #e86805;
     margin-top: 20px;
+    height: 1.2rem;
+    line-height: 1.2rem;
 }
 
 section.features {
@@ -273,10 +315,18 @@ section.questions {
 
 section.questions h2 {
     width: 100%;
-    padding: 50px 0;
+    padding-top: 50px;
     text-align: center;
     color: #ef8e21;
     font-weight: 200;
+    padding-bottom: 30px;
+}
+
+section.questions a {
+    width: 9rem;
+    display: block;
+    margin: 0 auto 35px;
+    text-align: center;
 }
 
 section.questions article {
@@ -354,19 +404,29 @@ footer nav ul {
 
     header a, header button {
         font-size: 1rem;
-        padding-left: 32px;
     }
 
-    header ul.large-screen {
-        display: flex;
+    .large-screen {
+        display: block;
+    }
+
+    .small-screen {
+        display: none;
     }
 
     header.show-hamburger {
         background-color: transparent;
     }
 
-    header ul.small-screen, header ul.hamburger-menu {
-        display: none !important;
+    header.show-hamburger ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header li.try {
+        margin-left: auto;
     }
 
     section.features {
@@ -423,10 +483,6 @@ footer nav ul {
 
     p {
         font-size: 1.2rem;
-    }
-
-    .button {
-        font-size: 1rem;
     }
 
     section.intro {
