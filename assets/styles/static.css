@@ -205,6 +205,8 @@ section .contact-button {
     display: inline-block;
     background-color: #e86805;
     margin-top: 20px;
+    height: 1.2rem;
+    line-height: 1.2rem;
 }
 
 section.features {
