@@ -186,14 +186,24 @@ header.hamburger li.hamburger img {
     display: block;
 }
 
+.share li a {
+    padding-left: 30px;
+}
+
 .share li.twitter a {
     background-image: url("../svg/twitter.svg");
-    padding-left: 30px;
 }
 
 .share li.facebook a {
     background-image: url("../svg/facebook.svg");
-    padding-left: 30px;
+}
+
+.share li.reddit a {
+    background-image: url("../svg/reddit.svg");
+}
+
+.share li.linkedin a {
+    background-image: url("../svg/linkedin.svg");
 }
 
 .iconified {
