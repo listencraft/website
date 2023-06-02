@@ -158,6 +158,7 @@ header.hamburger li.hamburger img {
     text-align: center;
     backdrop-filter: blur(10px);
     border-radius: 10px;
+    box-shadow: 5px 5px 6px 2px rgba(50, 50, 50, 0.38);
 }
 
 #copy-popup.open {
@@ -169,11 +170,11 @@ header.hamburger li.hamburger img {
     padding-bottom: 20px;
 }
 
-#try-popup > h2 {
+#try-popup h2 {
     font-weight: normal;
 }
 
-#try-popup > p {
+#try-popup p {
     font-weight: lighter;
     font-size: 1rem;
 }
@@ -521,7 +522,7 @@ footer nav ul {
     }
 
     .popup {
-        --popup-width: 24rem;
+        --popup-width: 26rem;
     }
 
     :root {
