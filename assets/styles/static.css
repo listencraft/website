@@ -53,7 +53,7 @@ header {
     padding: 15px 15px 0 15px;
 }
 
-header.show-hamburger {
+header.show-hamburger, .share ul {
     background-color: #472603;
 }
 
@@ -72,7 +72,7 @@ nav ul {
     align-items: center;
 }
 
-header.show-hamburger ul {
+header.show-hamburger > nav > ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -100,12 +100,100 @@ header li.hamburger img {
 
 header.show-hamburger li.hamburger img {
     transform: rotate(90deg);
-    transition: 0.2s;
+    transition: 0.4s ease-in-out;
 }
 
 header.hamburger li.hamburger img {
     transform: rotate(0deg);
-    transition: 0.2s;
+    transition: 0.4s ease-in-out;
+}
+
+.share ul {
+    padding: 15px;
+    display: none;
+}
+
+.share.open ul {
+    display: block;
+    position: static;
+    padding: 5px 0 0 15px;
+}
+
+.share li {
+    margin: 14px 5px;
+}
+
+.share li.copy {
+    display: flex;
+    flex-direction: row;
+}
+
+.share input {
+    background-color: #ae4f00;
+    color: #cccccc;
+    border: #cccccc;
+    padding: 4px;
+    width: 9rem;
+}
+
+.share li.copy button img {
+    height: 25px;
+}
+
+.share li.copy button {
+    margin: 0 8px;
+    background-image: none;
+    padding: 0;
+}
+
+.popup {
+    --popup-width: 14rem;
+    display: none;
+    position: fixed;
+    width: var(--popup-width);
+    background-color: #aaaaaa44;
+    top: 30vh;
+
+    left: calc(50vw - calc(var(--popup-width) / 2));
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+#copy-popup.open {
+    height: 100px;
+    line-height: 100px;
+}
+
+#try-popup {
+    padding-bottom: 20px;
+}
+
+#try-popup > h2 {
+    font-weight: normal;
+}
+
+#try-popup > p {
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+#try-popup > * {
+    margin: 15px;
+}
+
+.popup.open {
+    display: block;
+}
+
+.share li.twitter a {
+    background-image: url("../svg/twitter.svg");
+    padding-left: 30px;
+}
+
+.share li.facebook a {
+    background-image: url("../svg/facebook.svg");
+    padding-left: 30px;
 }
 
 .iconified {
@@ -368,7 +456,23 @@ footer nav ul {
 
 @media only screen and (min-width: 560px) {
 
+    header li.share.open ul {
+        --dialog-width: ;
+        position: absolute;
+        width: 13rem;
+        box-shadow: 5px 5px 6px 2px rgba(50, 50, 50, 0.38);
+        flex-direction: column;
+        padding: 15px;
+        align-self: flex-end;
+        top: 60px;
 
+    }
+
+    header li.share.open  {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     section.intro h1.iconified {
         padding-left: 0;
@@ -391,7 +495,7 @@ footer nav ul {
         background-color: transparent;
     }
 
-    header.show-hamburger ul {
+    header.show-hamburger nav > ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -404,6 +508,10 @@ footer nav ul {
 
     section.features {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .popup {
+        --popup-width: 24rem;
     }
 
     :root {
