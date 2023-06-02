@@ -9,7 +9,7 @@
     --ground-bottom-top-color: #462604;
     --bottom-gradient-height: 26%;
 
-    --cloud-baseline: calc(80px + 1rem);
+    --cloud-baseline: calc(40px + 1rem);
     --cloud-1-h: 70px;
     --cloud-2-h: 30px;
     --cloud-1-disp: calc(var(--cloud-baseline) - var(--cloud-1-h));
@@ -23,10 +23,6 @@ html {
 }
 
 body {
-    background-image: url("../svg/cloud_1.svg"), url("../svg/cloud_2.svg");
-    background-position: top var(--cloud-1-disp) right 90%,
-    top calc(15px + var(--cloud-2-disp)) right 7%;
-    background-size: auto var(--cloud-1-h), auto var(--cloud-2-h);
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
@@ -34,7 +30,11 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     font-family: "Saira", sans-serif;
-    padding: 20px 0 0 0;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 h1,
@@ -45,38 +45,225 @@ h3 {
 
 h1 {
     font-family: Garamond, serif;
-    color: rgb(255 155 74);
+    color: #f9a027;
     font-size: 2rem;
 }
 
-nav {
+header {
+    padding: 15px 15px 0 15px;
+}
+
+header.show-hamburger, .share ul {
+    background-color: #472603;
+}
+
+.large-screen {
+    display: none;
+}
+
+header.show-hamburger li.try, header.show-hamburger li.share {
+    display: block;
+}
+
+nav ul {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-nav h2 {
+header.show-hamburger > nav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+
+header.show-hamburger li {
+    font-size: 1rem;
+    width: 100px;
+    padding-top: 0;
+    margin-left: 0;
+}
+
+header li.hamburger {
+    align-self: flex-start;
+}
+
+header li.hamburger button {
+    padding-left: 5px;
+}
+
+header li.hamburger img {
+    height: 25px;
+}
+
+header.show-hamburger li.hamburger img {
+    transform: rotate(90deg);
+    transition: 0.4s ease-in-out;
+}
+
+header.hamburger li.hamburger img {
+    transform: rotate(0deg);
+    transition: 0.4s ease-in-out;
+}
+
+.share ul {
+    padding: 15px;
+    display: none;
+}
+
+.share.open ul {
+    display: block;
+    position: static;
+    padding: 5px 0 0 15px;
+}
+
+.share li {
+    margin: 14px 5px;
+}
+
+.share li.copy {
+    display: flex;
+    flex-direction: row;
+}
+
+.share input {
+    background-color: #ae4f00;
+    color: #cccccc;
+    border: #cccccc;
+    padding: 4px;
+    width: 9rem;
+}
+
+.share li.copy button img {
+    height: 25px;
+}
+
+.share li.copy button {
+    margin: 0 8px;
+    background-image: none;
+    padding: 0;
+}
+
+.popup {
+    --popup-width: 14rem;
+    display: none;
+    position: fixed;
+    width: var(--popup-width);
+    background-color: #aaaaaa44;
+    top: 30vh;
+
+    left: calc(50vw - calc(var(--popup-width) / 2));
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 5px 5px 6px 2px rgba(50, 50, 50, 0.38);
+}
+
+#copy-popup.open {
+    height: 100px;
+    line-height: 100px;
+}
+
+#try-popup {
+    padding-bottom: 20px;
+}
+
+#try-popup h2 {
+    font-weight: normal;
+}
+
+#try-popup p {
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+#try-popup > * {
+    margin: 15px;
+}
+
+.popup.open {
+    display: block;
+}
+
+.share li a {
+    padding-left: 30px;
+}
+
+.share li.twitter a {
+    background-image: url("../svg/twitter.svg");
+}
+
+.share li.facebook a {
+    background-image: url("../svg/facebook.svg");
+}
+
+.share li.reddit a {
+    background-image: url("../svg/reddit.svg");
+}
+
+.share li.linkedin a {
+    background-image: url("../svg/linkedin.svg");
+}
+
+.iconified {
     background-image: url("../png/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section.intro h1.iconified {
+    padding-left: 2rem
+}
+
+header li.home a {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+header.hamburger li.try {
+    margin-left: auto;
+}
+
+nav li {
+    margin-right: 17px;
+    font-size: 0.8rem;
+    margin-top: 18px;
+}
+
+nav ul li.try a {
+    background-image: url("../svg/rocket-solid.svg");
+}
+
+nav ul li.share button {
+    background-image: url("../svg/share-nodes-solid.svg");
+}
+
+header nav button, header nav a {
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    display: block;
+    background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
-    padding-left: 38px;
-    padding-top: 7px;
-    height: 30px;
+    padding-left: 25px;
 }
 
 main {
-    background-image: url("../svg/sun_bg.svg");
-    background-size: contain;
-    background-position: top 28rem right;
+    background-image: url("../svg/cloud_1.svg"), url("../svg/cloud_2.svg"), url("../svg/sun_bg.svg");
+    background-size: auto var(--cloud-1-h), auto var(--cloud-2-h), contain;
+    background-position: top var(--cloud-1-disp) right 90%,
+    top calc(15px + var(--cloud-2-disp)) right 7%, top 28rem right;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
 }
 
 section,
-header,
 footer {
     padding: 0 15px;
 }
@@ -88,11 +275,12 @@ footer {
     background-color: #f9a027;
     padding: 5px 15px;
     border-radius: 50px;
-    transition: all ease-in-out 400ms;
+    transition: background-color ease-in-out 400ms;
 }
 
 .button:hover {
-    background-color: #1f1209;
+    background-color: #100f0f;
+    text-decoration: none;
 }
 
 section.intro {
@@ -111,10 +299,12 @@ section.intro p {
     padding-top: 20px;
 }
 
-section.intro .contact-button {
+section .contact-button {
     display: inline-block;
     background-color: #e86805;
     margin-top: 20px;
+    height: 1.2rem;
+    line-height: 1.2rem;
 }
 
 section.features {
@@ -190,10 +380,18 @@ section.questions {
 
 section.questions h2 {
     width: 100%;
-    padding: 50px 0;
+    padding-top: 50px;
     text-align: center;
     color: #ef8e21;
     font-weight: 200;
+    padding-bottom: 30px;
+}
+
+section.questions a {
+    width: 9rem;
+    display: block;
+    margin: 0 auto 35px;
+    text-align: center;
 }
 
 section.questions article {
@@ -236,7 +434,7 @@ section.questions article p {
 
 footer {
     text-align: center;
-    padding: 50px 15px;
+    padding: 50px 0 15px 0;
     background-color: #633507;
 }
 
@@ -246,22 +444,85 @@ footer h2 {
 
 footer p {
     color: #ff9b4a;
-    padding-top: 20px;
-    width: 280px;
-    margin: 0 auto;
+    padding: 20px 0;
+    margin: 0 15px;
 }
 
 footer a {
-    color: #ff9b4a;
+    color: #ffb980;
+}
+
+footer nav a {
+    background-image: url("../svg/github-mark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+footer nav ul {
+    justify-content: center;
 }
 
 @media only screen and (min-width: 560px) {
+
+    header li.share.open ul {
+        --dialog-width: ;
+        position: absolute;
+        width: 13rem;
+        box-shadow: 5px 5px 6px 2px rgba(50, 50, 50, 0.38);
+        flex-direction: column;
+        padding: 15px;
+        align-self: flex-end;
+        top: 60px;
+
+    }
+
+    header li.share.open  {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section.intro h1.iconified {
+        padding-left: 0;
+        background-image: none;
+    }
+
+    header a, header button {
+        font-size: 1rem;
+    }
+
+    .large-screen {
+        display: block;
+    }
+
+    .small-screen {
+        display: none;
+    }
+
+    header.show-hamburger {
+        background-color: transparent;
+    }
+
+    header.show-hamburger nav > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header li.try {
+        margin-left: auto;
+    }
+
     section.features {
         grid-template-columns: 1fr 1fr;
     }
 
-    footer p {
-        width: 400px;
+    .popup {
+        --popup-width: 26rem;
     }
 
     :root {
@@ -271,7 +532,7 @@ footer a {
 
 @media only screen and (min-width: 685px) {
     main {
-        background-position: top 19rem right;
+        background-position: top var(--cloud-1-disp) right 90%, top calc(15px + var(--cloud-2-disp)) right 7%, top 19rem right;
     }
 
     section.intro {
@@ -283,7 +544,7 @@ footer a {
     }
 
     :root {
-        --cloud-baseline: calc(140px + 1rem);
+        --cloud-baseline: calc(90px + 1rem);
         --cloud-1-h: 150px;
         --cloud-2-h: 70px;
         --bottom-gradient-height: 40%;
@@ -313,10 +574,6 @@ footer a {
 
     p {
         font-size: 1.2rem;
-    }
-
-    .button {
-        font-size: 1rem;
     }
 
     section.intro {
