@@ -33,23 +33,26 @@
             header.className = "hamburger";
         }
     }
+
     function copyLink() {
         const copyText = document.getElementById("copy_url");
         copyText.select();
         copyText.setSelectionRange(0, 99999); // For mobile devices
         navigator.clipboard.writeText(copyText.value);
-        // debugger
         const copyPopup = document.getElementById("copy-popup");
         copyPopup.classList.add("open");
         setTimeout(() => copyPopup.classList.remove("open"), 1000);
     }
+
     function togglePopup(elementId) {
         const shareDialog = document.getElementById(elementId);
-        if (shareDialog.classList.contains("open") ) {
+        if (shareDialog.classList.contains("open")) {
             shareDialog.classList.remove("open");
         } else {
             shareDialog.classList.add("open");
-            document.addEventListener("click", (evt) => {togglePopup(elementId, evt); }, {once: true, capture: true});
+            document.addEventListener("click", (evt) => {
+                togglePopup(elementId, evt);
+            }, {once: true, capture: true});
         }
     }
 </script>
@@ -69,26 +72,26 @@
             </li>
             <li id="share" class="share large-screen">
                 <button id="share-button" onclick="togglePopup('share')">Share</button>
-                <ul >
+                <ul>
                     <li class="copy"><input disabled value="http://www.listencraft.org" id="copy_url">
-                        <button title="Copy url" onclick="copyLink()"><img src="assets/svg/copy-solid.svg" alt="Copy address"></button>
-
+                        <button title="Copy url" onclick="copyLink()"><img src="assets/svg/copy-solid.svg"
+                                                                           alt="Copy address"></button>
                     </li>
                     <li class="twitter">
                         <a href="https://twitter.com/intent/tweet?text=Listencraft - Learn the art of good listening&url=http://www.listencraft.org">
-                        twitter</a></li>
+                            twitter</a></li>
                     <li class="facebook">
                         <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.listencraft.org&t=Listencraft - Learn the art of good listening"
-                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                           onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
                            target="_blank" title="Share on Facebook">facebook
                         </a>
-                        </li>
+                    </li>
                     <li class="reddit">
-                    <a href="http://www.reddit.com/submit?url=http://www.listencraft.org&title=Listencraft - Learn the art of good listening">
-                        reddit</a></li>
+                        <a href="http://www.reddit.com/submit?url=http://www.listencraft.org&title=Listencraft - Learn the art of good listening">
+                            reddit</a></li>
                     <li class="linkedin">
-                    <a href=" http://www.linkedin.com/shareArticle?mini=true&url=http://www.listencraft.org">
-                        linkedin</a></li>
+                        <a href=" http://www.linkedin.com/shareArticle?mini=true&url=http://www.listencraft.org">
+                            linkedin</a></li>
                 </ul>
             </li>
             <li class="contact"><a class="button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
@@ -99,7 +102,8 @@
     </nav>
     <div id="copy-popup" class="popup">Link copied to clipboard</div>
     <div id="try-popup" class="popup"><h2>There's nothing here yet</h2>
-        <p>Click the button below to register your interest and receive an email when there is something to try.</p>
+        <p>Click the button below to register your interest and be an <em>early adopter</em> to receive updates by email as soon as
+            the first demos are ready!</p>
         <a class="button contact-button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
             Register interest!
         </a>
@@ -109,50 +113,56 @@
     <section class="intro">
         <h1 class="iconified">Listencraft</h1>
         <h2>Learn the art of good listening</h2>
-        <p>It's not easy to listen well, but good listening is a valuable skill that you can learn.</p>
-        <p>Pick-up better listening skills, so that you can help others
+        <p>Effective listening is a powerful force for good and a valuable skill that you can learn.</p>
+        <p>Pick up better listening skills to help yourself, as well as others,
             and make the world a more sensitive place.</p>
-        <a class="button contact-button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
-            Sign me up!
+        <p>Coming September 2023!</p>
+        <a class="button contact-button" href="javascript:togglePopup('try-popup')">
+            I want to learn!
         </a>
     </section>
     <section class="features">
-        <article class="one">
-            <h2>Accessible</h2>
-            <p>Free to use, on any device, with everyone in mind</p>
-        </article>
-        <article class="two">
-            <h2>Game like</h2>
-            <p>It's not a bunch of dull lectures</p>
-        </article>
-        <article class="three">
-            <h2>Video and Audio</h2>
-            <p>Not just text, but audio and video that engages</p>
-        </article>
-        <article class="four">
-            <h2>Principles and Measurement</h2>
-            <p>Based on sound principles, we want to know if, who, and how it
-                helps</p>
-        </article>
+        <h2>What is listening good for?</h2>
+        <div>
+            <article class="two">
+                <h3>Emotional Support</h3>
+                <p>Want to support someone, but not sure how? Just listening can help.</p>
+            </article>
+            <article class="one">
+                <h3>Resolving Conflict</h3>
+                <p>Too many arguments? Listening is the basis of conflict resolution.</p>
+            </article>
+            <article class="three">
+                <h3>Good Leadership</h3>
+                <p>Good leaders are good listeners. The coaching mentality is built on listening.</p>
+            </article>
+            <article class="four">
+                <h3>Being Effective</h3>
+                <p>Whether it's at work or in your personal life, being useful requires good listening.</p>
+            </article>
+        </div>
     </section>
     <section class="questions">
-        <h2>Below are some questions that need answering. Can you help answer them?</h2>
+        <h2>Listencraft is just starting out and needs your help!</h2>
+        <p>You can help just by telling us that you are
+            interested and what you think.</p>
+        <p>If you have the necessary skills, you might also help us with the following questions.</p>
         <a class="button contact-button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
             I want to contribute!
         </a>
         <div>
             <article class="one">
                 <h3>Principles</h3>
-                <p>What principles inform the content and approach to learning and
+                <p><em>Educationalists and psychologists:</em> What principles will inform the approach to learning and
                     behaviour change?</p>
             </article>
             <article class="two">
                 <h3>Audience</h3>
-                <p>Who do we want to reach, and how will we reach them?</p>
+                <p><em>Marketing and social media:</em> Who do we want to reach, and how will we reach them?</p>
             </article>
             <article class="three">
-                <h3>Technology</h3>
-                <p>What technology will be used in the tool's construction?</p>
+                <h3>Business</h3>
+                <p><em>Business and funding:</em> How will the work be funded? What will be the org's formal basis?</p>
             </article>
         </div>
     </section>
@@ -161,6 +171,7 @@
     <h2>
         Want to get involved?
     </h2>
+    <p>We're aiming to release our first version by the end of September 2023, so now is the time to jump in!</p>
     <p>
         Use our
         <a href=" https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
