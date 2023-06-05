@@ -387,13 +387,13 @@ section article > * {
 
 section.profile {
     background-color: #472603;
-    padding-top: 20px;
+    padding: 20px 30px 0 30px;
 }
 
 section.profile div {
     padding: 20px;
     border-radius: 10px;
-    background-image: linear-gradient(145deg, #944300 0%, #944300 40%, #6e3001 40%, #6e3001 80%, #562604 80%, #562604 100%);
+    background-image: linear-gradient(145deg, #944300 0%, #944300 40%, #6e3001aa 40%, #6e3001aa 80%), linear-gradient(200deg,  #6e3001 0%,  #6e3001 60%, #462604 60%, #462604 100%);
     max-width: 1300px;
     margin: 0 auto;
 }
@@ -427,6 +427,10 @@ section.profile p:nth-child(odd) {
 section.profile p:nth-child(even) {
     text-align: left;
     margin-right: var(--profile-margin-w);
+}
+
+section.profile p:last-child {
+    padding-bottom: 10px;
 }
 
 
@@ -586,7 +590,7 @@ footer nav ul {
     }
 
     section.profile {
-        padding: 20px 50px;
+        padding: 20px 75px;
     }
 
 
@@ -686,6 +690,10 @@ footer nav ul {
 @media only screen and (min-width: 1200px) {
     section.questions div {
         margin: 0 160px;
+    }
+
+    section.profile {
+        padding: 20px 66px;
     }
 
     :root {
