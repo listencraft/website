@@ -620,7 +620,7 @@ footer nav ul {
         --sun-bg-right: -300px;
         --sun-bg-overlap-h: 200px;
 
-        --profile-margin-w: 20%;
+        --profile-margin-w: 10%;
     }
 }
 
@@ -689,6 +689,6 @@ footer nav ul {
     }
 
     :root {
-        --profile-margin-w: 40%;
+        --profile-margin-w: 15%;
     }
 }
