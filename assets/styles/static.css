@@ -387,13 +387,38 @@ section article > * {
 
 section.profile {
     background-color: #472603;
-    padding: 20px 30px 0 30px;
+    padding: 20px 36px 0 36px;
 }
 
-section.profile div {
+a.github {
+    background-image: url("../svg/github-mark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.wordpress {
+    background-image: url("../svg/wordpress.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section.profile div.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.profile div.links a {
+    color: #ffe1ba;
+    font-size: 0.8rem;
+    padding-left: 18px;
+    margin: 5px;
+}
+
+section.profile > div {
     padding: 20px;
-    border-radius: 10px;
-    background-image: linear-gradient(145deg, #944300 0%, #944300 40%, #6e3001aa 40%, #6e3001aa 80%), linear-gradient(200deg,  #6e3001 0%,  #6e3001 60%, #462604 60%, #462604 100%);
+    border-radius: 24px;
+    background-image: linear-gradient(145deg, #944300 0%, #944300 40%, transparent 40%, transparent 80%), linear-gradient(200deg,  #843300 0%,  #843300 60%, #6e3001 60%, #6e3001 100%);
     max-width: 1300px;
     margin: 0 auto;
 }
@@ -429,10 +454,9 @@ section.profile p:nth-child(even) {
     margin-right: var(--profile-margin-w);
 }
 
-section.profile p:last-child {
+section.profile p:nth-child(4) {
     padding-bottom: 10px;
 }
-
 
 section.questions {
     background: url("../svg/brown_bottom_bg.svg"),
@@ -521,12 +545,9 @@ footer a {
 }
 
 footer nav a {
-    background-image: url("../svg/github-mark.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-left: 24px;
     color: #ccc;
     font-size: 1rem;
+    padding-left: 24px;
 }
 
 footer nav ul {
@@ -590,9 +611,8 @@ footer nav ul {
     }
 
     section.profile {
-        padding: 20px 75px;
+        padding: 40px 75px 0;
     }
-
 
     .popup {
         --popup-width: 26rem;
@@ -693,7 +713,7 @@ footer nav ul {
     }
 
     section.profile {
-        padding: 20px 66px;
+        padding: 40px 66px 0;
     }
 
     :root {
