@@ -21,6 +21,8 @@
     --cloud-2-h: 30px;
     --cloud-1-disp: calc(var(--cloud-baseline) - var(--cloud-1-h));
     --cloud-2-disp: calc(var(--cloud-baseline) - var(--cloud-2-h));
+
+    --profile-margin-w: 0%;
 }
 
 html {
@@ -318,6 +320,15 @@ section .contact-button {
     line-height: 1.2rem;
 }
 
+section.questions h2, section.features h2, section.profile h2{
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+    color: #ef8e21;
+    font-weight: 200;
+    padding-bottom: 30px;
+}
+
 section.features {
     background-image: url("../svg/ground_bg.svg"), url("../svg/sun_bg.svg"), linear-gradient(180deg, rgba(0, 0, 0, 0) 100px, #472603 -100px);
     background-position: top var(--ground-bg-top) right var(--ground-bg-right), top var(--sun-bg-top) right var(--sun-bg-right), top right;
@@ -374,6 +385,51 @@ section article > * {
     padding-bottom: 20px;
 }
 
+section.profile {
+    background-color: #472603;
+    padding-top: 20px;
+}
+
+section.profile div {
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(145deg, #944300 0%, #944300 40%, #6e3001 40%, #6e3001 80%, #562604 80%, #562604 100%);
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+section.profile h2 {
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+section.profile a {
+    color: #ff9b4a;
+}
+
+section.questions > p, section.profile p  {
+    line-height: 1.4rem;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+section.profile p {
+    color: #ffd9b3;
+    padding-bottom: 30px;
+}
+
+section.profile p:nth-child(odd) {
+    text-align: right;
+    margin-left:var(--profile-margin-w);
+}
+
+section.profile p:nth-child(even) {
+    text-align: left;
+    margin-right: var(--profile-margin-w);
+}
+
+
 section.questions {
     background: url("../svg/brown_bottom_bg.svg"),
     linear-gradient(
@@ -388,15 +444,6 @@ section.questions {
     background-clip: border-box;
     background-origin: border-box;
     background-size: 100% auto, cover;
-}
-
-section.questions h2, section.features h2 {
-    width: 100%;
-    padding-top: 50px;
-    text-align: center;
-    color: #ef8e21;
-    font-weight: 200;
-    padding-bottom: 30px;
 }
 
 section.questions a {
@@ -439,18 +486,14 @@ section.questions article.three h3 {
     background-image: url("../svg/building-solid.svg");
 }
 
+section.questions > p {
+    color: #ffd2a6;
+    max-width: 60rem;
+}
+
 section.questions article p {
     color: #000000;
     padding: 20px 20px 20px 20px;
-}
-
-section.questions > p {
-    color: #ffd2a6;
-    line-height: 1.4rem;
-    padding-bottom: 20px;
-    text-align: center;
-    max-width: 60rem;
-    margin: 0 auto;
 }
 
 footer {
@@ -542,6 +585,11 @@ footer nav ul {
         grid-template-columns: 1fr 1fr;
     }
 
+    section.profile {
+        padding: 20px 50px;
+    }
+
+
     .popup {
         --popup-width: 26rem;
     }
@@ -571,6 +619,8 @@ footer nav ul {
         --bottom-gradient-height: 40%;
         --sun-bg-right: -300px;
         --sun-bg-overlap-h: 200px;
+
+        --profile-margin-w: 20%;
     }
 }
 
@@ -623,6 +673,10 @@ footer nav ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    section.profile {
+        background-color: #331b03;
+    }
+
     :root {
         --ground-bottom-top-color: #331b03;
         --bottom-gradient-height: 70%;
@@ -632,5 +686,9 @@ footer nav ul {
 @media only screen and (min-width: 1200px) {
     section.questions div {
         margin: 0 160px;
+    }
+
+    :root {
+        --profile-margin-w: 40%;
     }
 }
