@@ -477,7 +477,7 @@ section.questions {
 section.questions a {
     width: 9rem;
     display: block;
-    margin: 12px auto 35px;
+    margin: 12px auto 0;
     text-align: center;
 }
 
