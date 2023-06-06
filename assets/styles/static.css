@@ -9,11 +9,20 @@
     --ground-bottom-top-color: #462604;
     --bottom-gradient-height: 26%;
 
+    --sun-bg-overlap-h: 150px;
+    --sun-bg-h: 300px;
+    --sun-bg-w: 1000px;
+    --sun-bg-bottom: calc(0px - (var(--sun-bg-h) - var(--sun-bg-overlap-h)));
+    --sun-bg-top:  calc(0px - var(--sun-bg-overlap-h));
+    --sun-bg-right: -400px;
+
     --cloud-baseline: calc(40px + 1rem);
     --cloud-1-h: 70px;
     --cloud-2-h: 30px;
     --cloud-1-disp: calc(var(--cloud-baseline) - var(--cloud-1-h));
     --cloud-2-disp: calc(var(--cloud-baseline) - var(--cloud-2-h));
+
+    --profile-margin-w: 0%;
 }
 
 html {
@@ -47,6 +56,10 @@ h1 {
     font-family: Garamond, serif;
     color: #f9a027;
     font-size: 2rem;
+}
+
+em {
+    font-weight: 600;
 }
 
 header {
@@ -254,10 +267,10 @@ header nav button, header nav a {
 }
 
 main {
-    background-image: url("../svg/cloud_1.svg"), url("../svg/cloud_2.svg"), url("../svg/sun_bg.svg");
-    background-size: auto var(--cloud-1-h), auto var(--cloud-2-h), contain;
+    background-image: url("../svg/cloud_1.svg"), url("../svg/cloud_2.svg");
+    background-size: auto var(--cloud-1-h), auto var(--cloud-2-h);
     background-position: top var(--cloud-1-disp) right 90%,
-    top calc(15px + var(--cloud-2-disp)) right 7%, top 28rem right;
+    top calc(15px + var(--cloud-2-disp)) right 7%;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
@@ -284,9 +297,9 @@ footer {
 }
 
 section.intro {
-    background-image: url("../svg/ground_bg.svg"), url("../webp/man_woman.webp"), url("../webp/trees.webp");
-    background-size: var(--ground-bg-w) var(--ground-bg-h), 70%, 25%;
-    background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right), right 50px bottom, bottom left;
+    background-image: url("../svg/ground_bg.svg"), url("../webp/man_woman.webp"), url("../webp/trees.webp"), url("../svg/sun_bg.svg");
+    background-size: var(--ground-bg-w) var(--ground-bg-h), 70%, 25%, var(--sun-bg-w) var(--sun-bg-h);
+    background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right), right 50px bottom, bottom left, bottom var(--sun-bg-bottom) right var(--sun-bg-right);
     background-repeat: no-repeat;
     padding-top: 20%;
     padding-bottom: 53%;
@@ -307,16 +320,25 @@ section .contact-button {
     line-height: 1.2rem;
 }
 
+section.questions h2, section.features h2, section.profile h2{
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+    color: #ef8e21;
+    font-weight: 200;
+    padding-bottom: 30px;
+}
+
 section.features {
-    background-image: url("../svg/ground_bg.svg"), linear-gradient(180deg, rgba(0, 0, 0, 0) 100px, #472603 -100px);
-    background-position: top var(--ground-bg-top) right var(--ground-bg-right), top right;
+    background-image: url("../svg/ground_bg.svg"), url("../svg/sun_bg.svg"), linear-gradient(180deg, rgba(0, 0, 0, 0) 100px, #472603 -100px);
+    background-position: top var(--ground-bg-top) right var(--ground-bg-right), top var(--sun-bg-top) right var(--sun-bg-right), top right;
     background-repeat: no-repeat;
     background-clip: border-box;
     background-origin: border-box;
-    background-size: var(--ground-bg-w) var(--ground-bg-h), 100%;
+    background-size: var(--ground-bg-w) var(--ground-bg-h), var(--sun-bg-w)  var(--sun-bg-h), 100%;
 }
 
-section.features,
+section.features div,
 section.questions div {
     display: grid;
     grid-template-columns: 1fr;
@@ -324,12 +346,13 @@ section.questions div {
     align-items: center;
 }
 
-section.features article h2 {
+section.features article h3 {
     color: hsl(31, 100%, 10%);
 }
 
 section.features article p {
-    color: hsl(31, 100%, 25%);
+    color: hsl(31, 100%, 18%);
+    line-height: 1.4rem;
 }
 
 section.features article.one {
@@ -362,6 +385,79 @@ section article > * {
     padding-bottom: 20px;
 }
 
+section.profile {
+    background-color: #472603;
+    padding: 20px 36px 0 36px;
+}
+
+a.github {
+    background-image: url("../svg/github-mark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.wordpress {
+    background-image: url("../svg/wordpress.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section.profile div.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.profile div.links a {
+    color: #ffe1ba;
+    font-size: 0.8rem;
+    padding-left: 18px;
+    margin: 5px;
+}
+
+section.profile > div {
+    padding: 20px;
+    border-radius: 24px;
+    background-image: linear-gradient(145deg, #944300 0%, #944300 40%, transparent 40%, transparent 80%), linear-gradient(200deg,  #843300 0%,  #843300 60%, #6e3001 60%, #6e3001 100%);
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+section.profile h2 {
+    font-weight: 600;
+    padding-top: 25px;
+}
+
+section.profile a {
+    color: #ff9b4a;
+}
+
+section.questions > p, section.profile p  {
+    line-height: 1.4rem;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+section.profile p {
+    color: #ffd9b3;
+    padding-bottom: 30px;
+}
+
+section.profile p:nth-child(odd) {
+    text-align: right;
+    margin-left:var(--profile-margin-w);
+}
+
+section.profile p:nth-child(even) {
+    text-align: left;
+    margin-right: var(--profile-margin-w);
+}
+
+section.profile p:nth-child(5) {
+    padding-bottom: 10px;
+}
+
 section.questions {
     background: url("../svg/brown_bottom_bg.svg"),
     linear-gradient(
@@ -378,19 +474,10 @@ section.questions {
     background-size: 100% auto, cover;
 }
 
-section.questions h2 {
-    width: 100%;
-    padding-top: 50px;
-    text-align: center;
-    color: #ef8e21;
-    font-weight: 200;
-    padding-bottom: 30px;
-}
-
 section.questions a {
     width: 9rem;
     display: block;
-    margin: 0 auto 35px;
+    margin: 12px auto 0;
     text-align: center;
 }
 
@@ -424,12 +511,17 @@ section.questions article.two h3 {
 }
 
 section.questions article.three h3 {
-    background-image: url("../svg/technology_icon.svg");
+    background-image: url("../svg/building-solid.svg");
+}
+
+section.questions > p {
+    color: #ffd2a6;
+    max-width: 60rem;
 }
 
 section.questions article p {
     color: #000000;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 20px 20px 20px;
 }
 
 footer {
@@ -449,16 +541,13 @@ footer p {
 }
 
 footer a {
-    color: #ffb980;
+    color: #ffd2a6;
 }
 
 footer nav a {
-    background-image: url("../svg/github-mark.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-left: 24px;
     color: #ccc;
     font-size: 1rem;
+    padding-left: 24px;
 }
 
 footer nav ul {
@@ -517,8 +606,12 @@ footer nav ul {
         margin-left: auto;
     }
 
-    section.features {
+    section.features div {
         grid-template-columns: 1fr 1fr;
+    }
+
+    section.profile {
+        padding: 40px 75px 0;
     }
 
     .popup {
@@ -532,15 +625,15 @@ footer nav ul {
 
 @media only screen and (min-width: 685px) {
     main {
-        background-position: top var(--cloud-1-disp) right 90%, top calc(15px + var(--cloud-2-disp)) right 7%, top 19rem right;
+        background-position: top var(--cloud-1-disp) right 90%, top calc(15px + var(--cloud-2-disp)) right 7%;
     }
 
     section.intro {
         padding-bottom: 12%;
         padding-right: 60%;
-        background-size: var(--ground-bg-w) var(--ground-bg-h), 50%, 15%;
+        background-size: var(--ground-bg-w) var(--ground-bg-h), 50%, 15%, var(--sun-bg-w) var(--sun-bg-h);;
         background-position: bottom var(--ground-bg-bottom) right var(--ground-bg-right),
-        right 50px bottom -5px, bottom left;
+        right 50px bottom -5px, bottom left, bottom var(--sun-bg-bottom) right var(--sun-bg-right);;
     }
 
     :root {
@@ -548,6 +641,10 @@ footer nav ul {
         --cloud-1-h: 150px;
         --cloud-2-h: 70px;
         --bottom-gradient-height: 40%;
+        --sun-bg-right: -300px;
+        --sun-bg-overlap-h: 200px;
+
+        --profile-margin-w: 10%;
     }
 }
 
@@ -556,6 +653,12 @@ footer nav ul {
         --ground-bg-overlap-h: 32px;
         --ground-bg-h: 400px;
         --ground-bg-w: 1250px;
+
+
+        --sun-bg-h: 600px;
+        --sun-bg-w: 2000px;
+        --sun-bg-right: -500px;
+        --sun-bg-overlap-h: 200px;
     }
 }
 
@@ -563,12 +666,11 @@ footer nav ul {
     :root {
         --ground-bg-h: 672px;
         --ground-bg-w: 1910px;
-        --ground-bottom-bg-top: 5rem;
-        --ground-bottom-top-color: #412303;
+        /*--ground-bottom-bg-top: 5rem;*/
+        /*--ground-bottom-top-color: #412303;*/
     }
 
-    h2,
-    h3 {
+    h2 {
         font-size: 1.4rem;
     }
 
@@ -581,7 +683,7 @@ footer nav ul {
     }
 
     section.questions article {
-        min-height: 220px;
+        min-height: 240px;
     }
 
     section.questions div {
@@ -591,19 +693,30 @@ footer nav ul {
 }
 
 @media only screen and (min-width: 1050px) {
-    section.features {
+    section.features div {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    section.profile {
+        background-color: #331b03;
+    }
+
     :root {
-        --ground-bottom-top-color: #2b1604;
+        --ground-bottom-top-color: #331b03;
         --bottom-gradient-height: 70%;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     section.questions div {
-        grid-template-columns: repeat(3, auto);
         margin: 0 160px;
+    }
+
+    section.profile {
+        padding: 40px 66px 0;
+    }
+
+    :root {
+        --profile-margin-w: 15%;
     }
 }
