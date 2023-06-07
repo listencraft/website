@@ -47,9 +47,14 @@ footer,
 nav,
 main,
 th,
+button,
+a,
 td {
   margin: 0;
   padding: 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-origin: border-box;
 }
 
 table {

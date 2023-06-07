@@ -32,10 +32,6 @@ html {
 }
 
 body {
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-origin: border-box;
-
     max-width: 1440px;
     margin: 0 auto;
     font-family: "Saira", sans-serif;
@@ -260,9 +256,6 @@ header nav button, header nav a {
     display: block;
     background-color: transparent;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-origin: border-box;
     padding-left: 25px;
 }
 
@@ -271,9 +264,6 @@ main {
     background-size: auto var(--cloud-1-h), auto var(--cloud-2-h);
     background-position: top var(--cloud-1-disp) right 90%,
     top calc(15px + var(--cloud-2-disp)) right 7%;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-origin: border-box;
 }
 
 section,
@@ -332,9 +322,6 @@ section.questions h2, section.features h2, section.profile h2{
 section.features {
     background-image: url("../svg/ground_bg.svg"), url("../svg/sun_bg.svg"), linear-gradient(180deg, rgba(0, 0, 0, 0) 100px, #472603 -100px);
     background-position: top var(--ground-bg-top) right var(--ground-bg-right), top var(--sun-bg-top) right var(--sun-bg-right), top right;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-origin: border-box;
     background-size: var(--ground-bg-w) var(--ground-bg-h), var(--sun-bg-w)  var(--sun-bg-h), 100%;
 }
 
@@ -442,16 +429,7 @@ section.questions > p, section.profile p  {
 section.profile p {
     color: #ffd9b3;
     padding-bottom: 30px;
-}
-
-section.profile p:nth-child(odd) {
-    text-align: right;
-    margin-left:var(--profile-margin-w);
-}
-
-section.profile p:nth-child(even) {
-    text-align: left;
-    margin-right: var(--profile-margin-w);
+    text-align: center;
 }
 
 section.profile p:nth-child(5) {
@@ -496,9 +474,6 @@ section.questions article h3 {
     background-color: #221202;
     background-position: 20px 20px;
     background-size: 30px 30px;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-origin: border-box;
     padding: 30px 0 10px 60px;
 }
 
@@ -612,6 +587,16 @@ footer nav ul {
 
     section.profile {
         padding: 40px 75px 0;
+    }
+
+    section.profile p:nth-child(odd) {
+        text-align: right;
+        margin-left:var(--profile-margin-w);
+    }
+
+    section.profile p:nth-child(even) {
+        text-align: left;
+        margin-right: var(--profile-margin-w);
     }
 
     .popup {
