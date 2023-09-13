@@ -3,6 +3,8 @@
 
 <head>
     <title>Listencraft</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="description" content="Learn the art of good listening">
     <meta name="theme-color" content="#ae4f00"/>
@@ -51,7 +53,7 @@
         } else {
             shareDialog.classList.add("open");
             document.addEventListener("click", (evt) => {
-                togglePopup(elementId, evt);
+                togglePopup(elementId);
             }, {once: true, capture: true});
         }
     }
@@ -103,8 +105,7 @@
     <div id="copy-popup" class="popup">Link copied to clipboard</div>
     <div id="try-popup" class="popup"><h2>There's nothing to see yet</h2>
         <p>Click the button below to register your interest to be an <em>early adopter</em> and receive updates by email
-            as soon as
-            the first demos are ready!</p>
+            as soon as the first demos are ready!</p>
         <a class="button contact-button" href="https://8a62ka77kuw.typeform.com/to/fEV1Nfxk">
             Register interest!
         </a>
@@ -117,7 +118,7 @@
         <p>Effective listening is a powerful force for good and a valuable skill that you can learn.</p>
         <p>Pick up better listening skills to help yourself, as well as others,
             and make the world a more sensitive place.</p>
-        <p>Coming September 2023!</p>
+        <p>Coming early 2024!</p>
         <a class="button contact-button" href="javascript:togglePopup('try-popup')">
             I want to learn!
         </a>
@@ -169,7 +170,7 @@
                 to learn better listening skills - so that they can support each other and make the world a more
                 understanding place.
             </p>
-            <p>I am a software developer, and a more recent entrepreneur so, to do something about it, I am best placed to
+            <p>I have a BSc in Psychology and an MSc in Computer Science. I am a software developer, and a more recent entrepreneur. So, to do something about it, I am best placed to
                 make an app.
             </p>
             <div class="links"><a class="wordpress" href="http://jamesabromley.wordpress.com">blog</a>
