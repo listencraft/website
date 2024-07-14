@@ -28,7 +28,7 @@
 html {
     background-size: 100%;
     background: #6e3001 linear-gradient(180deg, #ae4f00 0%, #6e3001 50%) no-repeat;
-    color: #ffffff;
+    color: #ffe8c0;
 }
 
 body {
@@ -50,7 +50,7 @@ h3 {
 
 h1 {
     font-family: "Cinzel Decorative", serif;
-    color: #f9a027;
+    color: #f9c087;
     font-size: 1.5rem;
 }
 
@@ -274,7 +274,7 @@ footer {
 .button {
     text-decoration: none;
     font-size: 0.8rem;
-    color: white;
+    color: inherit;
     background-color: #f9a027;
     padding: 5px 15px;
     border-radius: 50px;
@@ -522,7 +522,6 @@ footer a {
 }
 
 footer nav a {
-    color: #ccc;
     font-size: 1rem;
     padding-left: 24px;
 }
