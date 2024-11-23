@@ -175,21 +175,21 @@ div#copy-popup.open {
     line-height: 100px;
 }
 
-div#try-popup {
+div#try-popup, div#initial-popup {
     padding-bottom: 20px;
-}
 
-div#try-popup h2 {
-    font-weight: normal;
-}
+    h2 {
+        font-weight: normal;
+    }
 
-div#try-popup p {
-    font-weight: lighter;
-    font-size: 1rem;
-}
+    p {
+        font-weight: lighter;
+        font-size: 1rem;
+    }
 
-div#try-popup > * {
-    margin: 15px;
+    > * {
+        margin: 15px;
+    }
 }
 
 .popup.open {
